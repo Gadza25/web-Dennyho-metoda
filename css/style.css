@@ -1,0 +1,128 @@
+@charset "UTF-8";
+html {
+  box-sizing: border-box;
+}
+
+*, ::before, ::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  font-family: Dosis, sans-serif;
+  background-color: rgba(186, 219, 250, 0.993);
+}
+
+.wrapper {
+  max-width: 1000px;
+  margin: 0 auto;
+  background-color: rgb(194, 241, 241);
+}
+
+.header {
+  position: sticky;
+}
+
+.image_background {
+  height: auto;
+  background-position: center;
+  background-size: cover;
+}
+
+.header__sledujte-nas {
+  text-align: right;
+}
+
+.header__links {
+  padding: 20px 30px;
+  display: flex;
+  justify-content: right;
+  align-items: flex-end;
+  list-style: none;
+}
+
+.header__links:hover, :active {
+  background-color: var(pink);
+}
+
+.header__img-logo {
+  text-align: left;
+  max-width: 80px;
+}
+
+.header__name {
+  text-align: right;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.menu {
+  background-color: aquamarine;
+}
+
+.menu__checkbox {
+  position: absolute;
+  left: -9999;
+}
+
+.menu__list {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  margin: 0;
+  padding: 3px;
+}
+
+.menu__link {
+  display: block;
+  padding: 10px 20px;
+  color: blue;
+  text-decoration: none;
+  font-weight: bolder;
+}
+
+h1, h2, h3 {
+  color: black;
+}
+
+.footer {
+  background-color: var(rgb(192, 255, 255));
+}
+
+@media screen and (max-width: 799px) {
+  .menu__checkbox:checked ~ .menu__list {
+    display: block;
+  }
+  .menu__checkbox {
+    position: absolute;
+    left: -9999px;
+  }
+}
+@media screen and (min-width: 800px) {
+  .menu__checkbox {
+    position: absolute;
+    left: -9999px;
+  }
+  .menu__toggler {
+    cursor: pointer;
+  }
+  .menu__list {
+    display: none; /*standartně bude menu schované */
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    background-color: white;
+  }
+  .menu__item {
+    border-bottom: 2px solid black;
+  }
+  .menu__link {
+    display: inline-block;
+    padding: 15px;
+    text-decoration: none;
+    color: black;
+  }
+  .menu__link:hover {
+    background-color: rgb(230, 20, 20);
+  }
+}

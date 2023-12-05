@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dennyho metoda</title>
+    <link rel="stylesheet" href="css/style.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <!-- Google Fonts: Dosis 300, 500, 800; K2D 200, 400, 600, 800; Montserrat 300, 400, 500; Playfair+Display-->
+    <link rel="preconnect" href="https://fonts.gstatic.com"> 
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@300;500;800&family=K2D:ital,wght@0,200;0,400;0,700;1,200;1,400;1,700&
+    family=Montserrat:wght@300;400;500&family=Nunito:wght@400;700&family=Playfair+Display&family=Raleway&display=swap" rel="stylesheet">
+	<!-- Google Fonts: Raleway 400, Open Sans 400(i)/700(i) -->
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Raleway&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- začátek wrapper - šablony-->
+    <div class="wrapper">
+
+		<header class="header">
+            <div class="header__contact">
+                <h2>Sledujte nás</h2>
+                <ul class="header__links">
+                    <li><a href="https://www.facebook.com/groups/729777153805192" target="_blank">Facebook<img src="image/icons8-facebook-64.png" alt="ikona facebooku"></a></li>
+                    <li><a href="https://www.instagram.com/dennyhometoda/" target="_blank">Instagram<img src="image/icons8-instagram-64.png" alt="ikona instagramu"></a></li>
+                    <li><a href="https://www.youtube.com/@dennyhometoda4021/featured" target="_blank">Youtube<img src="image/icons8-youtube-64.png" alt="ikona youtube"></a></li>
+                    <li><a href="https://www.tiktok.com/@dennyhometoda" target="_blank">Tik Tok<img src="image/icons8-tiktok-64.png" alt="ikona tiktoku"></a></li>
+                </ul>
+            </div>
+
+            <div class="header__image"></div>
+
+			<div class="header__inner">
+				<div class="header__left">
+					<div class="header__img-logo"><img src="image/logo.png" alt="logo Dennyho metoda"></div>
+				</div>
+                <div class="header__right">
+					<div class="header__name">Dennyho metoda</div>
+            </div>
+
+            <nav class="menu">
+                <!-- hamburger menu, které chci skrýt -->
+                <input type="checkbox" class="menu__checkbox" id="menu-checkbox">
+                <label for="menu-checkbox" class="menu__toggler">☰ Menu</label>
+
+                <ul class="menu__list">
+                    <li class="menu__item"><a class="menu__link" href="/">Úvod</a></li>
+                    <li class="menu__item"><a class="menu__link" href="/dennyho_metoda/">Dennyho metoda</a></li>
+                    <li class="menu__item"><a class="menu__link" href="/komu_pomahame/">Komu pomáháme</a></li>
+                    <li class="menu__item"><a class="menu__link" href="/nas_tym/">Náš tým</a></li>
+                    <li class="menu__item"><a class="menu__link" href="/videa/">Videa</a></li>
+                    <li class="menu__item"><a class="menu__link" href="/fotogalerie/">Fotogalerie</a></li>
+                    <li class="menu__item"><a class="menu__link" href="/muzete_nam_pomoci/">Můžete nám pomoci</a></li>
+                    <li class="menu__item"><a class="menu__link" href="/napiste_nam/">Napište nám</a></li>
+                </ul>
+            </nav>
+			</div>
+
+			<div class="header__image">
+                <img src="image/Ema - vsichni1.jpg" alt="pohadkove postavicky">
+            </div>
+		</header>
+
+<!-- zde je různý obsah dle šablon -->
+<main class="main">
+    
+    {{ content | safe }}
+    
+</main>
+    
+<!-- Úvodní stránka -->
+
+
+        <!-- zde je patička stejná pro všechny stránky -->
+        <footer class="footer">       
+            <div class="footer__photography">
+                <h2>Photography by</h2>
+                <ul class="footer__links">
+                    <li><a href="https://divytvor.cz" target="_blank">Hana Němečková</a></li>
+                    <li><a href="#">Zuzana Slámová</a></li>
+                    <li><a href="#">Ema Štěpařová</a></li>
+                </ul>
+            </div>
+
+            <div class="footer__copyright">
+                <h2>&copy;2023, Dennyho metoda</h2>
+                <a href="https://icons8.com/" target="_blank">Skills icon by Icons8</a>
+            </div>
+        </footer>
+
+    <!-- konec wrapper / šablony -->
+    </div>
+
+</body>
+</html>
