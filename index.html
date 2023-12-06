@@ -1,98 +1,61 @@
-<!DOCTYPE html>
-<html lang="cs">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dennyho metoda</title>
-    <link rel="stylesheet" href="css/style.css">
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <!-- Google Fonts: Dosis 300, 500, 800; K2D 200, 400, 600, 800; Montserrat 300, 400, 500; Playfair+Display-->
-    <link rel="preconnect" href="https://fonts.gstatic.com"> 
-    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@300;500;800&family=K2D:ital,wght@0,200;0,400;0,700;1,200;1,400;1,700&
-    family=Montserrat:wght@300;400;500&family=Nunito:wght@400;700&family=Playfair+Display&family=Raleway&display=swap" rel="stylesheet">
-	<!-- Google Fonts: Raleway 400, Open Sans 400(i)/700(i) -->
-	<link rel="preconnect" href="https://fonts.gstatic.com">
-	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Raleway&display=swap" rel="stylesheet">
-</head>
-
-<body>
-    <!-- začátek wrapper - šablony-->
-    <div class="wrapper">
-
-		<header class="header">
-            <div class="header__contact">
-                <h2>Sledujte nás</h2>
-                <ul class="header__links">
-                    <li><a href="https://www.facebook.com/groups/729777153805192" target="_blank">Facebook<img src="image/icons8-facebook-64.png" alt="ikona facebooku"></a></li>
-                    <li><a href="https://www.instagram.com/dennyhometoda/" target="_blank">Instagram<img src="image/icons8-instagram-64.png" alt="ikona instagramu"></a></li>
-                    <li><a href="https://www.youtube.com/@dennyhometoda4021/featured" target="_blank">Youtube<img src="image/icons8-youtube-64.png" alt="ikona youtube"></a></li>
-                    <li><a href="https://www.tiktok.com/@dennyhometoda" target="_blank">Tik Tok<img src="image/icons8-tiktok-64.png" alt="ikona tiktoku"></a></li>
-                </ul>
-            </div>
-
-            <div class="header__image"></div>
-
-			<div class="header__inner">
-				<div class="header__left">
-					<div class="header__img-logo"><img src="image/logo.png" alt="logo Dennyho metoda"></div>
-				</div>
-                <div class="header__right">
-					<div class="header__name">Dennyho metoda</div>
-            </div>
-
-            <nav class="menu">
-                <!-- hamburger menu, které chci skrýt -->
-                <input type="checkbox" class="menu__checkbox" id="menu-checkbox">
-                <label for="menu-checkbox" class="menu__toggler">☰ Menu</label>
-
-                <ul class="menu__list">
-                    <li class="menu__item"><a class="menu__link" href="/">Úvod</a></li>
-                    <li class="menu__item"><a class="menu__link" href="/dennyho_metoda/">Dennyho metoda</a></li>
-                    <li class="menu__item"><a class="menu__link" href="/komu_pomahame/">Komu pomáháme</a></li>
-                    <li class="menu__item"><a class="menu__link" href="/nas_tym/">Náš tým</a></li>
-                    <li class="menu__item"><a class="menu__link" href="/videa/">Videa</a></li>
-                    <li class="menu__item"><a class="menu__link" href="/fotogalerie/">Fotogalerie</a></li>
-                    <li class="menu__item"><a class="menu__link" href="/muzete_nam_pomoci/">Můžete nám pomoci</a></li>
-                    <li class="menu__item"><a class="menu__link" href="/napiste_nam/">Napište nám</a></li>
-                </ul>
-            </nav>
-			</div>
-
-			<div class="header__image">
-                <img src="image/Ema - vsichni1.jpg" alt="pohadkove postavicky">
-            </div>
-		</header>
-
-<!-- zde je různý obsah dle šablon -->
-<main class="main">
-    
-    {{ content | safe }}
-    
-</main>
-    
-<!-- Úvodní stránka -->
+---
+layout: moje-sablona.njk
+title: Dennyho metoda
+---
 
 
-        <!-- zde je patička stejná pro všechny stránky -->
-        <footer class="footer">       
-            <div class="footer__photography">
-                <h2>Photography by</h2>
-                <ul class="footer__links">
-                    <li><a href="https://divytvor.cz" target="_blank">Hana Němečková</a></li>
-                    <li><a href="#">Zuzana Slámová</a></li>
-                    <li><a href="#">Ema Štěpařová</a></li>
-                </ul>
-            </div>
+<h1  class="menu__dennyho-metoda"> {{ title }} </h1>
 
-            <div class="footer__copyright">
-                <h2>&copy;2023, Dennyho metoda</h2>
-                <a href="https://icons8.com/" target="_blank">Skills icon by Icons8</a>
-            </div>
-        </footer>
+<p>“Ze zdánlivě malého nápadu se stala nepostradatelná záležitost, 
+do které je dnes zapojeno neuvěřitelné množství lidí, kteří pomáhají...“</p>
 
-    <!-- konec wrapper / šablony -->
-    </div>
+<h2>Jak to všechno vzniklo</h2>
 
-</body>
-</html>
+<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum nam velit iure laudantium perspiciatis. 
+    Inventore architecto ut sequi nisi itaque quaerat! Neque dicta quasi assumenda fuga? Cumque, nobis! Aperiam, sit.</p>
+
+<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Soluta expedita asperiores mollitia, neque repellat, 
+    dolore odit nam nihil iusto ipsum, accusantium sint molestiae perferendis magnam quos ut similique vero beatae.</p>
+
+<img class="image image--left" src="/image/Ema - kosmonaut Mickey.jpg" alt="Pit kosmonaut">
+
+<p>Eos ad corrupti earum voluptatibus id praesentium blanditiis voluptates quas atque fugiat ea officiis iste aliquam 
+    rerum eligendi ipsum incidunt placeat neque quos exercitationem doloremque minima, molestiae corporis quia? Nemo.</p>
+
+    <img class="image image--right" src="/image/Ema - kosmonaut Denny.jpg" alt="Denny jako kosmonaut">
+
+<p>Quos vero itaque reiciendis eaque eveniet sit illo atque vitae a at ratione accusamus ad, voluptas, hic esse rerum 
+    fugiat laudantium consectetur dignissimos enim beatae necessitatibus. Impedit itaque maxime repudiandae?</p>
+
+<p>Porro impedit architecto esse suscipit ad autem hic, neque quae qui recusandae est. Dolores consectetur 
+    rem itaque nisi labore repudiandae vitae, accusamus provident qui obcaecati fugiat reprehenderit doloribus 
+    officiis quisquam.</p>
+
+    <!-- <a class="button_cist-vice" href="/dennyho_metoda/jak_to_vsechno_vzniklo/">Číst více</a> -->
+
+
+<h2>Metodika</h2>
+
+<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum nam velit iure laudantium perspiciatis. 
+    Inventore architecto ut sequi nisi itaque quaerat! Neque dicta quasi assumenda fuga? Cumque, nobis! Aperiam, sit.</p>
+
+<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Soluta expedita asperiores mollitia, neque repellat, 
+    dolore odit nam nihil iusto ipsum, accusantium sint molestiae perferendis magnam quos ut similique vero beatae.</p>
+
+<h2>Příběhy</h2>
+
+<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum nam velit iure laudantium perspiciatis. 
+    Inventore architecto ut sequi nisi itaque quaerat! Neque dicta quasi assumenda fuga? Cumque, nobis! Aperiam, sit.</p>
+
+<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Soluta expedita asperiores mollitia, neque repellat, 
+    dolore odit nam nihil iusto ipsum, accusantium sint molestiae perferendis magnam quos ut similique vero beatae.</p>
+
+<h2>Psali o nás</h2>
+
+<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum nam velit iure laudantium perspiciatis. 
+    Inventore architecto ut sequi nisi itaque quaerat! Neque dicta quasi assumenda fuga? Cumque, nobis! Aperiam, sit.</p>
+
+<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Soluta expedita asperiores mollitia, neque repellat, 
+    dolore odit nam nihil iusto ipsum, accusantium sint molestiae perferendis magnam quos ut similique vero beatae.</p>
+
+    <!-- <a class="button_cist-vice" href="/dennyho_metoda/metodika/">Číst více</a> -->
