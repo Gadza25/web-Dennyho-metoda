@@ -9,9 +9,10 @@ html {
 // podmínky
 
 $primarni-barva: blue;
-$barva-hoover: pink;
-$footer-barva: rgb(192, 255, 255);
-$sekundarni-barva: black;
+$sekundarni-barva: aqua;
+$background-barva: rgb(195, 247, 247);
+$hoover-barva: pink;
+$footer-barva: rgb(130, 247, 247);
 $hlavni-pismo: Dosis, sans-serif;
 $velikost-pisma: 16px;
 $spacer: 20px;
@@ -24,123 +25,185 @@ body {
 	background-color: rgba(186, 219, 250, 0.993);
 }
 
+//moje-šablona
+
 .wrapper {
-    max-width: 1000px;
+    max-width: 1200px;
     margin: 0 auto;
-    background-color: rgb(194, 241, 241);
+    background-image: linear-gradient(to right, rgb(237, 223, 250),rgb(76, 213, 247));
 }
 
-.header {
-    position: sticky;
-}
-
-.image_background {
-    height: auto;
-    background-position: center;
-    background-size: cover;
-}
-
-.header__sledujte-nas {
-    text-align: right;
-}
-
-.header__links {
-    padding: 20px 30px;
-	display: flex;
-	justify-content: right;
-	align-items: flex-end;
-    list-style: none;
-    text-decoration: none;
-}
-
-.header__links:hover, :active {
-    background-color: var($barva-hoover);
+//hlavička
+.header__zahlavi {
+    display: flex;
+    justify-content: space-between;
 }
 
 .header__img-logo {
-    text-align: left;
-    max-width: 80px;  
+	width: 100px;
+	height: 100px;
 }
 
-.header__name {
+.header__contact--nadpis {
     text-align: right;
-    font-size: 40px;
+    padding-right: 30px;
     font-weight: bold;
-}
-.menu {
-    background-color: aquamarine;
-}
-
-.menu__checkbox {
-    position: absolute;
-    left: -9999;
+    font-size: $velikost-pisma;
+    color: $primarni-barva;
 }
 
-.menu__list {
+.ikony {
+    width: 40px;
+}
+
+.header__contact--list {
     display: flex;
-    justify-content: center;
+    justify-content: right;
     list-style: none;
     margin: 0;
     padding: 3px;
 }
 
-.menu__link {
+.header__item {
+    border-bottom: 1px dashed black;
     display: block;
-    padding: 10px 20px;
-    color: $primarni-barva;
+    font-size: 15px;
+}
+
+.header__link {
+    display: block;
+    padding: 10px;
     text-decoration: none;
-    font-weight: bolder;
+	/*justify-content: right;
+	align-items: flex-end;
+    list-style: none;
+    text-decoration: none;
+    line-height: 1;*/
 }
 
-h1, h2, h3 {
-	color: $sekundarni-barva;
+.header__link:hover {
+    background-color: $hoover-barva;
 }
 
+.header__inner {
+    background-image: url(/image/Ema\ -\ vsichni1.jpg);
+    min-height: 250px;
+    color: white;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-size: 30px;
+    position: relative;
+}
+
+.header__name {
+    text-align: right;
+    padding: 200px 0 0 0;
+    font-size: $velikost-pisma * 1,5;
+    font-weight: bold;
+}
+
+h1, h2 {
+	color: $primarni-barva;
+}
 
 // patička
 
-.footer {
-    background-color: var($footer-barva);
+.footer__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    justify-content: space-evenly;
+    background-color: $footer-barva;
+    color: black;
+    font-size: 15px;
+}
+.footer__nadpis {
+    font-size: $velikost-pisma;
 }
 
-// hamburger menu
+.footer__photographers {
+    padding: 0;
+    list-style: none;
+    justify-content: left;
+}
 
-@media screen and (max-width: 799px) {
-    .menu__checkbox:checked ~ .menu__list {
-        display: block;
+.footer__copyright {
+    font-size: $velikost-pisma;
+    font-weight: bold;
+}
+
+.footer__icon {
+    color: black;
+    font-weight: bold;
+}
+
+// pro mobil - hamburger menu
+// @media screen and (max-width: 799px) { }
+
+    .menu__checkbox {   //čtvereček checkboxu se schová = NEFUNGUJE TO!!!
+        /*position: absolute;
+        left: -9999px; */
+        display: none;
     }
-    .menu__checkbox {
-		position: absolute;
-		left: -9999px;
-	}
-}
 
-@media screen and (min-width: 800px) {
-	
-	.menu__checkbox {
-		position: absolute;
-		left: -9999px;
-	}
-	.menu__toggler {
-		cursor: pointer; 
-	}
 	.menu__list {
-		display: none;  /*standartně bude menu schované */
+		display: none;  // menu bude schované 
 		margin: 0;
 		padding: 0;
 		list-style: none;
-		background-color: white;
+		background-color: $sekundarni-barva;
 	}
+
 	.menu__item {
-		border-bottom: 2px solid black;
+		border-bottom: 1px dashed black;
 	}
+
 	.menu__link {
-		display: inline-block;
-		padding: 15px;
+		display: block;
+		padding: 10px;
 		text-decoration: none;
-		color: black;
+		color: $primarni-barva;
 	}
 	.menu__link:hover {
-		background-color: rgb(230, 20, 20);
+		background-color: $hoover-barva;
+	}
+
+    .menu__checkbox:checked ~ .menu__list {
+        display: block;
+    }    
+
+ 	.menu__toggler {
+		cursor: pointer; 
+	}   
+
+// pro tablet a více
+
+@media screen and (min-width: 800px) {
+    // .menu {background-color: aquamarine;}
+	
+	// .menu__checkbox { position: absolute}
+    .menu__toggler { 
+        display: none; 
+    }
+
+    .menu__list {
+        display: flex;
+        justify-content: center;
+        list-style: none;
+        margin: 0;
+        padding: 3px;
+    }
+
+    .menu__link {
+        display: block;
+        padding: 10px 20px;
+        color: $primarni-barva;
+        text-decoration: none;
+        font-weight: bolder;
+    }
+	.menu__item {
+		border-right: 1px dashed black;
+        justify-content: center;
 	}
 }
