@@ -82,13 +82,32 @@ body {
 
 .header__name {
   text-align: right;
-  padding: 200px 0 0 0;
+  padding: 200px 20px 0 0;
   font-size: 16px, 5;
   font-weight: bold;
 }
 
 h1, h2 {
   color: blue;
+}
+
+footer {
+  background-color: rgb(130, 247, 247);
+  padding: 0;
+  margin: 0;
+  border-top: 1px dashed black;
+}
+
+.footer__prohlaseni {
+  font-size: 15px;
+  padding: 5px 20px;
+  text-align: center;
+  background-color: rgb(130, 247, 247);
+  border-bottom: 1px dashed black;
+}
+
+.footer__napis-prohlaseni {
+  padding-bottom: 0;
 }
 
 .footer__grid {
@@ -119,6 +138,25 @@ h1, h2 {
 .footer__icon {
   color: black;
   font-weight: bold;
+}
+
+h3 {
+  margin-top: 10px;
+}
+
+.glide__slide img {
+  width: 100%;
+}
+
+.popis-fotky {
+  background-color: rgb(245, 218, 223);
+  padding: 10px;
+  min-height: 250px;
+}
+
+.sloupec {
+  width: 500px;
+  border: 5px solid black;
 }
 
 .menu__checkbox {

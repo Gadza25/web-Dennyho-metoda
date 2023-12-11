@@ -98,7 +98,7 @@ body {
 
 .header__name {
     text-align: right;
-    padding: 200px 0 0 0;
+    padding: 200px 20px 0 0;
     font-size: $velikost-pisma * 1,5;
     font-weight: bold;
 }
@@ -107,7 +107,25 @@ h1, h2 {
 	color: $primarni-barva;
 }
 
-// patička
+// *** FOOTER (patička)
+footer {
+    background-color: $footer-barva;
+    padding: 0;
+    margin: 0;
+    border-top: 1px dashed black;
+}
+
+.footer__prohlaseni {
+    font-size: 15px;
+    padding: 5px 20px;
+    text-align: center;
+    background-color: $footer-barva;
+    border-bottom: 1px dashed black;
+}
+
+.footer__napis-prohlaseni {
+    padding-bottom: 0;
+}
 
 .footer__grid {
     display: grid;
@@ -138,10 +156,30 @@ h1, h2 {
     font-weight: bold;
 }
 
+// *** FOTOGALERIE ***
+h3 {
+	margin-top: 10px;
+}
+
+.glide__slide img {
+  width: 100%;
+  }
+
+.popis-fotky {
+  background-color: rgb(245, 218, 223);
+  padding: 10px;
+  min-height: 250px;
+}
+
+.sloupec {
+  width: 500px;
+  border: 5px solid black;
+}
+
 // pro mobil - hamburger menu
 // @media screen and (max-width: 799px) { }
 
-    .menu__checkbox {   //čtvereček checkboxu se schová = NEFUNGUJE TO!!!
+    .menu__checkbox {   //čtvereček checkboxu se schová
         /*position: absolute;
         left: -9999px; */
         display: none;
