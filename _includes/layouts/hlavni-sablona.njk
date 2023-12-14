@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dennyho metoda</title>
+    <link rel="stylesheet" href="/css/style.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <!-- Google Fonts: Dosis 300, 500, 800; K2D 200, 400, 600, 800; Montserrat 300, 400, 500; Playfair+Display-->
+    <link rel="preconnect" href="https://fonts.gstatic.com"> 
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@300;500;800&family=K2D:ital,wght@0,200;0,400;0,700;1,200;1,400;1,700&
+    family=Montserrat:wght@300;400;500&family=Nunito:wght@400;700&family=Playfair+Display&family=Raleway&display=swap" rel="stylesheet">
+	<!-- Google Fonts: Raleway 400, Open Sans 400(i)/700(i) -->
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Raleway&display=swap" rel="stylesheet">
+
+	<!-- vložení souborů ze složky css (staženo ze stránek glide.js v documentech - Assets)-->
+	<link rel="stylesheet" href="/css/glide.core.min.css">
+	<link rel="stylesheet" href="/css/glide.theme.min.css">
+</head>
+
+<body>
+    <!-- začátek wrapper - šablony-->
+    <div class="wrapper"> 
+
+                <!-- zde je různý obsah dle šablon -->
+        <main class="main">
+            
+            {{ content | safe }}
+            
+        </main>
+
+    </div> <!-- konec wrapper - šablony-->
+
+</body>
+
+</html>

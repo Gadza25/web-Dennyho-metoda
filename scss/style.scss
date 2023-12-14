@@ -1,10 +1,6 @@
-html {
-  box-sizing: border-box;
-}
+html {   box-sizing: border-box; }
 
-*, ::before, ::after {
-  box-sizing: inherit;
-}
+*, ::before, ::after {   box-sizing: inherit; }
 
 // podmínky
 
@@ -25,7 +21,7 @@ body {
 	background-color: rgba(186, 219, 250, 0.993);
 }
 
-//moje-šablona
+// *** ŠABLONA *** // moje-šablona -------------------------------
 
 .wrapper {
     max-width: 1200px;
@@ -33,7 +29,7 @@ body {
     background-image: linear-gradient(to right, rgb(237, 223, 250),rgb(76, 213, 247));
 }
 
-//hlavička
+// *** HEADER (hlavička) *** //  -------------------------------
 .header__zahlavi {
     display: flex;
     justify-content: space-between;
@@ -107,7 +103,7 @@ h1, h2 {
 	color: $primarni-barva;
 }
 
-// *** FOOTER (patička)
+// *** FOOTER (patička) *** //  -------------------------------
 footer {
     background-color: $footer-barva;
     padding: 0;
@@ -156,7 +152,7 @@ footer {
     font-weight: bold;
 }
 
-// *** FOTOGALERIE ***
+// *** FOTOGALERIE *** //  -------------------------------
 h3 {
 	margin-top: 10px;
 }
@@ -176,7 +172,12 @@ h3 {
   border: 5px solid black;
 }
 
-// pro mobil - hamburger menu
+// *** MŮŽETE NÁM POMOCI *** //  -------------------------------
+
+// *** NAPIŠTE NÁM *** //  -------------------------------
+
+
+// pro mobil - hamburger menu // -------------------------------
 // @media screen and (max-width: 799px) { }
 
     .menu__checkbox {   //čtvereček checkboxu se schová
@@ -215,11 +216,10 @@ h3 {
 		cursor: pointer; 
 	}   
 
-// pro tablet a více
+// *** pro tablet a více *** // ----------------------------------
 
 @media screen and (min-width: 800px) {
     // .menu {background-color: aquamarine;}
-	
 	// .menu__checkbox { position: absolute}
     .menu__toggler { 
         display: none; 
