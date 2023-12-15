@@ -26,6 +26,7 @@ body {
 .wrapper {
     max-width: 1200px;
     margin: 0 auto;
+    padding: 0 30px;
     background-image: linear-gradient(to right, rgb(237, 223, 250),rgb(76, 213, 247));
 }
 
@@ -109,42 +110,21 @@ h1, h2 {
 }
 
 // *** FOOTER (patička) *** //  -------------------------------
-footer {
-    background-color: $footer-barva;
+.footer {
     padding: 0;
     margin: 0;
-    border-top: 1px dashed black;
+    border-top: 2px solid white;
 }
 
 .footer__prohlaseni {
     font-size: 15px;
-    padding: 5px 20px;
+    padding: 2px 20px;
     text-align: center;
-    background-color: $footer-barva;
-    border-bottom: 1px dashed black;
-}
-
-.footer__napis-prohlaseni {
-    padding-bottom: 0;
 }
 
 .footer__grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    justify-items: center;
     justify-content: space-evenly;
-    background-color: $footer-barva;
-    color: black;
-    font-size: 15px;
-}
-.footer__nadpis {
-    font-size: $velikost-pisma;
-}
-
-.footer__photographers {
-    padding: 0;
-    list-style: none;
-    justify-content: left;
 }
 
 .footer__copyright {
@@ -158,19 +138,31 @@ footer {
 }
 
 // *** ÚVOD *** // ----------------------------------------
-.uvod__citace {
-    display: flex;
+.grid_uvod {
+    display: grid;
+    grid-template-areas: 
+    "uvod__levy uvod__stred uvod__pravy";
+    grid-auto-columns: 1fr 2fr 1fr;
+    justify-items: center;
     text-align: center;
-    border-radius: 10px;
-    border: 3px solid rgba(255, 255, 255, 0.747);
-    box-shadow: silver;
-    margin: 20px;
-    width: 350px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
 
+.grid_uvod__citace {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.grid_uvod img {
+    width: 100%;
 }
 
 // *** DENNYHO METODA *** // ---------------------------------------
 
+.reference__foto {
+    width: 200px;
+    height: 300px;
+}
 
 // *** KOMU POMÁHÁME *** // ----------------------------------------
 
@@ -179,13 +171,45 @@ footer {
 -----
 .videa__list {
     display: grid;
-    gap: 10px;
+    gap: 15px;
     grid-template-columns: repeat(auto-fill, 560px);
-    list-style: none;
     width: max-content;
+    padding: 10px 20px;
+    justify-content: center;
+}
+.videa__item {
+    list-style: none;
+    text-decoration: none;
+}
+.video__links {
+    text-align: center;
+    padding: 2px;
+}
+// *** FOTOGALERIE *** //  -------------------------------
+.fotogalerie {
+    display: grid;
+    gap: 15px;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
 }
 
-// *** FOTOGALERIE *** //  -------------------------------
+.foto-s-popiskem {
+    background-color: rgb(204, 243, 248);
+    padding: 5px;
+    margin: 0;
+    box-shadow: 2px;
+    border-radius: 10px;
+    justify-content: center;
+}
+
+.fotogalerie img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.fotogalerie figcaption {
+    text-align: center;
+}
+
 .nadpis-fotky {
 	margin-top: 10px;
     font-size: 14px;
