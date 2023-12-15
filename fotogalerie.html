@@ -4,96 +4,127 @@ title: Fotogalerie
 ---
 
 <h2> {{ title }} </h2>
-
-<nav class="menu_galerie">
-    <ul class="menu__list">
-        <li class="menu__item"><a href="/" class="menu__link">Postavičky</a></li>
-        <li class="menu__item"><a href="/" class="menu__link">Ze zákulisí</a></li>
-        <li class="menu__item"><a href="/" class="menu__link">Akce</a></li>
+<!--
+<nav class="podmenu_fotogalerie">
+    <ul class="podmenu_fotogalerie__list">
+        <li class="podmenu_fotogalerie__item"><a href="/postavicky/" class="podmenu_fotogalerie__link">Postavičky</a></li>
+        <li class="podmenu_fotogalerie__item"><a href="/zezakulisi/" class="podmenu_fotogalerie__link">Ze zákulisí</a></li>
+        <li class="podmenu_fotogalerie__item"><a href="/akce/" class="podmenu_fotogalerie__link">Akce</a></li>
     </ul>
 </nav>
-
+-->
 <!-- sem přidám několik fotografií s proklikem na ně v rámci JS - Glide -->
-<div class="glide">
-    <div class="glide__track" data-glide-el="track">
-        <ul class="glide__slides">
-            <li class="glide__slide">
-                <div class="popis-fotky"> 
-                <img src="/image/ZS - postavicky v zoo1.jpg" alt="Postavičky v zoo">
-                <h3>Postavičky v Brněnské zoo</h3>
-                <p>Postavičky se vydaly do zoo, aby dětem ukázali nové místo. </p>
-               </div>
-            </li>
-            <li class="glide__slide">
-                <div class="popis-fotky"> 
-                <img src="/image/HN - vsichni ve tride.jpg" alt="Postavičky">
-                <h3>Postavičky ve třídě</h3>
-                <p>Postavičky se vydaly do školních lavic, aby dětem ukázali nové místo. </p>
-               </div>
-            </li>
-            <li class="glide__slide">
-                <div class="popis-fotky"> 
-                <img src="/image/HN - vsichni3.jpg" alt="Postavičky">
-                <h3>Hromadné focení</h3>
-                <p>Postavičky si udělaly hromadnou fotku. </p>
-               </div>
-            </li>
-            <li class="glide__slide">
-                <div class="popis-fotky"> 
-                <img src="/image/Ema - VIDA Pat a Mat stavi hrad.jpg" alt="Pat a Mat staví hrad">
-                <h3>VIDA park v Brně</h3>
-                <p>Postavičky se vydaly do VIDA parku poznat nové místo. Pat a Mat staví hrad z kostek. </p>
-               </div>
-            </li>
-            <li class="glide__slide">
-                <div class="popis-fotky"> 
-                <img src="/image/Ema - nataceni na zelenem platne.jpg" alt="natáčení na zeleném plátně">
-                <h3>Z natáčení před zeleným plátnem</h3>
-                <p>Postavičky natáčí video před zeleným plátnem. </p>
-               </div>
-            </li>
-            <li class="glide__slide">
-                <div class="popis-fotky"> 
-                <img src="/image/Ema - Mickey na kluzisti.jpg" alt="Postavička Mickeyho na kluzišti">
-                <h3>Kluziště</h3>
-                <p>Mickey se učí bruslit.</p>
-               </div>
-            </li>
-            <li class="glide__slide">
-                <div class="popis-fotky"> 
-                <img src="/image/Ema - VIDA u tornada.jpg" alt="Vida park - u tornáda">
-                <h3>VIDA park v Brně</h3>
-                <p>Postavičky se vydaly do VIDA parku poznat nové místo. Pat a Mat u tornáda.</p>
-               </div>
-            </li>
-            <li class="glide__slide">
-                <div class="popis-fotky"> 
-                <img src="/image/Ema - foceni Mickey s Hektorem.jpg" alt="Mickey u profesionalniho fotografa">
-                <h3>Postavička u profesionální fotografky</h3>
-                <p>Mickey se nechává vyfotit u profesionální fotografky. Učí se tak nové místo a také zvuk, který vydává
-                    blesk při focení.</p>
-               </div>
-            </li>
-            <li class="glide__slide">
-                <div class="popis-fotky"> 
-                <img src="/image/Ema - foceni Denny s Hektorem.jpg" alt="Denny u profesionalniho fotografa">
-                <h3>Denny u profesionální fotografky</h3>
-                <p>Denny se nechává vyfotit u profesionální fotografky. Po shlédnutí videa, kdy Mickey se nechával fotit, zvládl 
-                    bez problémů i on. Dokonce se mu nechtělo pryč, moc se mu to zalíbilo. Z představy přemlouvání, že to nic není,
-                    z toho nakonec bylo dvě a půl hodiny focení a plno zábavy. </p>
-               </div>
-            </li>
-        </ul>
+<div class="sloupec">
+    <h2 class="sloupec_podnadpsis">Postavičky poznávají neznámá místa</h2>
+    <div class="glide">
+        <div class="glide__track" data-glide-el="track">
+            <ul class="glide__slides">
+                <li class="glide__slide">
+                    <div class="glide__slide"> 
+                    <img src="/image/ZS - postavicky v zoo1.jpg" alt="Postavičky v zoo">
+                    <h3 class="nadpis-fotky">Postavičky v Brněnské zoo</h3>
+                    <p class="popis-fotky">Postavičky se vydaly do brněnské zoo, aby dětem ukázaly nové místo. <br> 
+                        (foto by Zuzana Slámová, 2015) </p>
+                </div>
+                </li>
+                <li class="glide__slide">
+                    <div class="glide__slide"> 
+                    <img src="/image/Ema - VIDA Pat a Mat stavi hrad.jpg" alt="Pat a Mat staví hrad">
+                    <h3 class="nadpis-fotky">VIDA park v Brně</h3>
+                    <p class="popis-fotky">Postavičky se vydaly do VIDA parku poznat nové místo. Pat a Mat staví hrad z kostek. <br>
+                        (foto by Lucie Růžičková, 2015) </p>
+                </div>
+                </li>
+                <li class="glide__slide">
+                    <div class="glide__slide"> 
+                    <img src="/image/Ema - nataceni na zelenem platne.jpg" alt="natáčení na zeleném plátně">
+                    <h3 class="nadpis-fotky">Z natáčení před zeleným plátnem</h3>
+                    <p class="popis-fotky">Postavičky natáčí video před zeleným plátnem. <br>
+                        (foto by Ema Štěpařová, 2019) </p>
+                </div>
+                </li>
+                <li class="glide__slide">
+                    <div class="glide__slide"> 
+                    <img src="/image/Ema - Mickey na kluzisti.jpg" alt="Postavička Mickeyho na kluzišti">
+                    <h3 class="nadpis-fotky">Kluziště</h3>
+                    <p class="popis-fotky">Mickey se učí bruslit. <br>
+                        (foto by Ema Štěpařová, 2019) </p>
+                </div>
+                </li>
+                <li class="glide__slide">
+                    <div class="glide__slide"> 
+                    <img src="/image/Ema - VIDA u tornada.jpg" alt="Vida park - u tornáda">
+                    <h3 class="nadpis-fotky">VIDA park v Brně</h3>
+                    <p class="popis-fotky">Postavičky se vydaly do VIDA parku poznat nové místo. Pat a Mat u tornáda. <br>
+                        (foto by Lucie Růžičková, 2015) </p>
+                </div>
+                </li>
+                <li class="glide__slide">
+                    <div class="glide__slide"> 
+                    <img src="/image/Ema - foceni Mickey s Hektorem.jpg" alt="Mickey u profesionalniho fotografa">
+                    <h3 class="nadpis-fotky">Postavička u profesionální fotografky</h3>
+                    <p class="popis-fotky">Mickey se nechává vyfotit u profesionální fotografky. Učí se tak nové místo a také zvuk, který vydává
+                        blesk při focení. <br>
+                        (foto by Ema Štěpařová, 2014) </p>
+                </div>
+                </li>
+                <li class="glide__slide">
+                    <div class="glide__slide"> 
+                    <img src="/image/Ema - foceni Denny s Hektorem.jpg" alt="Denny u profesionalniho fotografa">
+                    <h3 class="nadpis-fotky">Denny u profesionální fotografky</h3>
+                    <p class="popis-fotky">Denny se nechává vyfotit u profesionální fotografky. Po shlédnutí videa, kdy Mickey se nechával fotit, zvládl 
+                        bez problémů i on. Dokonce se mu nechtělo pryč, moc se mu to zalíbilo. Z představy přemlouvání, že to nic není,
+                        z toho nakonec bylo dvě a půl hodiny focení a plno zábavy.
+                        (foto by Marie , 2014)  </p>
+                </div>
+                </li>
+                <li class="glide__slide">
+                    <div class="glide__slide"> 
+                    <img src="/image/HN - vsichni3.jpg" alt="Postavičky">
+                    <h3 class="nadpis-fotky">Hromadné focení</h3>
+                    <p class="popis-fotky">Postavičky si udělaly hromadnou fotku. <br>
+                        (foto by Hana Němečková, 2019) </p>
+                </div>
+                </li>
+                <li class="glide__slide">
+                    <div class="glide__slide"> 
+                    <img src="/image/HN - Denny jde k tabuli - mensi.jpg" alt="Úžasňák Denny jde k tabuli">
+                    <h3 class="nadpis-fotky">Úžasňák Denny jde k tabuli</h3>
+                    <p class="popis-fotky">Úžasňák Denny jde k tabuli. <br>
+                        (foto by Hana Němečková, 2019) </p>
+                </div>
+                </li>
+            </ul>
+        </div>
+        <div class="glide__arrows" data-glide-el="controls">
+            <button class="glide__arrow glide__arrow--left" data-glide-dir="<">ZPĚT</button>
+            <button class="glide__arrow glide__arrow--right" data-glide-dir=">">DALŠÍ</button>
+        </div>
+        <!-- počet by měl odpovídat počtu fotek-->
+        <div class="glide__bullets" data-glide-el="controls[nav]">
+            <button class="glide__bullet" data-glide-dir="=0"></button> 
+            <button class="glide__bullet" data-glide-dir="=1"></button>
+            <button class="glide__bullet" data-glide-dir="=2"></button>
+            <button class="glide__bullet" data-glide-dir="=3"></button>
+            <button class="glide__bullet" data-glide-dir="=4"></button>
+            <button class="glide__bullet" data-glide-dir="=5"></button>
+            <button class="glide__bullet" data-glide-dir="=6"></button>
+            <button class="glide__bullet" data-glide-dir="=7"></button>
+            <button class="glide__bullet" data-glide-dir="=8"></button>
+        </div>
     </div>
 </div>
+
 
 <script src="glide.min.js"></script>
 
 <script>
   new Glide('.glide', {
-      autoplay: 2000,
-      hoverpause: false,
-      perView: 2,
-      type: 'carousel'
   }).mount()
 </script>
+
+<!--
+autoplay: 2000,
+      hoverpause: false,
+      perView: 1,
+      type: 'carousel'-->

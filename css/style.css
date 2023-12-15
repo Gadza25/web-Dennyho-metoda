@@ -26,6 +26,8 @@ body {
 .header__img-logo {
   width: 100px;
   height: 100px;
+  padding: 10px;
+  border: 2px solid white;
 }
 
 .header__contact--nadpis {
@@ -33,7 +35,7 @@ body {
   padding-right: 30px;
   font-weight: bold;
   font-size: 16px;
-  color: blue;
+  color: white;
 }
 
 .ikony {
@@ -49,14 +51,17 @@ body {
 }
 
 .header__item {
-  border-bottom: 1px dashed black;
+  border: 2px dashed white;
+  border-radius: 10px;
+  margin: 2px;
   display: block;
-  font-size: 15px;
+  font-size: 12px;
 }
 
 .header__link {
   display: block;
   padding: 10px;
+  color: white;
   text-decoration: none;
   /*justify-content: right;
   align-items: flex-end;
@@ -140,8 +145,28 @@ footer {
   font-weight: bold;
 }
 
-h3 {
+.uvod__citace {
+  display: flex;
+  text-align: center;
+  border-radius: 10px;
+  border: 3px solid rgba(255, 255, 255, 0.747);
+  box-shadow: silver;
+  margin: 20px;
+  width: 350px;
+}
+
+----- .videa__list {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(auto-fill, 560px);
+  list-style: none;
+  width: -moz-max-content;
+  width: max-content;
+}
+
+.nadpis-fotky {
   margin-top: 10px;
+  font-size: 14px;
 }
 
 .glide__slide img {
@@ -151,12 +176,18 @@ h3 {
 .popis-fotky {
   background-color: rgb(245, 218, 223);
   padding: 10px;
-  min-height: 250px;
+  min-height: 50px;
+  font-size: 12px;
 }
 
 .sloupec {
-  width: 500px;
-  border: 5px solid black;
+  display: flex;
+  min-width: 250px;
+  border: 3px solid black;
+}
+
+.sloupec_podnadpsis {
+  text-align: center;
 }
 
 .menu__checkbox {
@@ -174,14 +205,18 @@ h3 {
 }
 
 .menu__item {
-  border-bottom: 1px dashed black;
+  border: 2px dashed black;
+  border-radius: 10px;
+  text-align: center;
+  align-items: baseline;
+  margin: 3px;
 }
 
 .menu__link {
   display: block;
   padding: 10px;
   text-decoration: none;
-  color: blue;
+  color: black;
 }
 
 .menu__link:hover {
@@ -210,12 +245,12 @@ h3 {
   .menu__link {
     display: block;
     padding: 10px 20px;
-    color: blue;
+    color: black;
     text-decoration: none;
     font-weight: bolder;
   }
   .menu__item {
-    border-right: 1px dashed black;
+    border: 2px dashed black;
     justify-content: center;
   }
 }
