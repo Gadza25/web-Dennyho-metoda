@@ -6,11 +6,13 @@ html {   box-sizing: border-box; }
 
 $primarni-barva: blue;
 $sekundarni-barva: aqua;
+$header-barva-pisma: rgb(89, 55, 240);
 $background-barva: rgb(195, 247, 247);
 $hoover-barva: pink;
 $footer-barva: rgb(130, 247, 247);
 $hlavni-pismo: Dosis, sans-serif;
-$velikost-pisma: 16px;
+$vedlejsi-pismo: 'Nunito', sans-serif;
+$velikost-pisma: 22px;
 $spacer: 20px;
 
 // -------------------------------------
@@ -26,8 +28,14 @@ body {
 .wrapper {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 30px;
+    //padding: 0 30px;
+    font-size: 18px;
     background-image: linear-gradient(to right, rgb(237, 223, 250),rgb(76, 213, 247));
+}
+
+main {
+    padding: 20px 50px;
+    overflow: auto;
 }
 
 // *** HEADER (hlavička) *** //  -------------------------------
@@ -48,7 +56,7 @@ body {
     padding-right: 30px;
     font-weight: bold;
     font-size: $velikost-pisma;
-    color: white;
+    color: $header-barva-pisma;
 }
 
 .ikony {
@@ -64,23 +72,16 @@ body {
 }
 
 .header__item {
-    border: 2px dashed white;
-    border-radius: 10px;
     margin: 2px;
     display: block;
-    font-size: 12px;
+    font-size: 13px;
 }
 
 .header__link {
     display: block;
     padding: 10px;
-    color: white;
+    color: black;
     text-decoration: none;
-	/*justify-content: right;
-	align-items: flex-end;
-    list-style: none;
-    text-decoration: none;
-    line-height: 1;*/
 }
 
 .header__link:hover {
@@ -88,26 +89,35 @@ body {
 }
 
 .header__inner {
-    background-image: url(/image/Ema\ -\ vsichni1.jpg);
-    min-height: 250px;
+    background-image: url(/image/Ema\ -\ vsichni1\ -\ mensi.jpg);
+    min-height: 150px;
     color: white;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     font-size: 30px;
-    position: relative;
-}
-
-.header__name {
-    text-align: right;
-    padding: 200px 20px 0 0;
-    font-size: $velikost-pisma * 1,5;
     font-weight: bold;
 }
 
-h1, h2 {
-	color: $primarni-barva;
+.header__name {
+    text-align: left;
+    padding: 200px 0 15px 20px ;
+    font-family: $vedlejsi-pismo;
+    font-size: $velikost-pisma * 2;
+    font-weight: bold;
+    color: white;
 }
+
+h1 {
+	color: $primarni-barva;
+    font-size: $velikost-pisma;
+}
+
+h2 {
+    color: black;
+    font-size: 20px;
+}
+
 
 // *** FOOTER (patička) *** //  -------------------------------
 .footer {
@@ -125,6 +135,7 @@ h1, h2 {
 .footer__grid {
     display: grid;
     justify-content: space-evenly;
+    text-align: center;
 }
 
 .footer__copyright {
@@ -147,25 +158,85 @@ h1, h2 {
     text-align: center;
     margin-top: 30px;
     margin-bottom: 30px;
+    padding: 10px;
+    gap: 15px;
 }
 
 .grid_uvod__citace {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
-.grid_uvod img {
+.grid_uvod__pravy {
     width: 100%;
+    background-color: rgb(204, 243, 248);
+    border-radius: 10px;
 }
 
 // *** DENNYHO METODA *** // ---------------------------------------
+.menu__dennyho-metoda {
+    text-align: justify;
+}
+
+.reference h3 {
+    font-size: 18px;
+}
+
+
 
 .reference__foto {
     width: 200px;
     height: 300px;
+    float: left;
+    padding-left: 10px;
 }
 
 // *** KOMU POMÁHÁME *** // ----------------------------------------
 
+.menu_komu-pomahame {
+    text-align: justify;
+}
+
+.menu_komu-pomahame img {
+    object-fit: cover;
+    width: 200px;
+    height: 300px;
+}
+
+.pomahame__rodicum img {
+    width: fit-content;
+    max-width: 200px;
+    float: right;
+    margin: 10px 0 10px 30px;  
+}
+
+.pomahame__detem img,
+.pomahame__pedagogum img
+{
+    width: fit-content;
+    max-width: 200px;
+    float: left;
+    margin: 10px 30px 10px 0;  
+}
+
+// *** NÁŠ TÝM *** /// ---------------------------------------------
+
+.nas-tym__autorka img {
+    width: fit-content;
+    max-width: 200px;
+    float: left;
+    margin: 10px 30px 10px 0;    
+}
+
+.menu_nas-tym__image--left,
+.menu_nas-tym__image--right {
+    width: 100%;
+}
+
+.nas-tym__dobrovolnici img {
+    max-width: 200px;
+    float: right;
+    margin: 0 0 10px 30px;
+}
 
 // *** VIDEA *** //  ---------------------------------
 -----
@@ -177,14 +248,16 @@ h1, h2 {
     padding: 10px 20px;
     justify-content: center;
 }
-.videa__item {
+.videa__item a {
     list-style: none;
-    text-decoration: none;
+    text-decoration: none;  
+    padding: 5px; 
+    color: black;     
 }
 .video__links {
     text-align: center;
-    padding: 2px;
 }
+
 // *** FOTOGALERIE *** //  -------------------------------
 .fotogalerie {
     display: grid;
@@ -237,9 +310,84 @@ h1, h2 {
 
 // *** MŮŽETE NÁM POMOCI *** //  -------------------------------
 
+.menu__pomoc {
+    text-align: justify;
+}
+
+.menu__pomoc p {
+    font-size: 18px;
+}
+.podekovani {
+    border: 1px solid $header-barva-pisma;
+}
+
+.podekovani__sentence {
+    text-align: center;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+
 
 // *** NAPIŠTE NÁM *** //  -------------------------------
 
+.contact__grid {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: $spacer * 1.5;
+}
+
+.contact__grid-item {
+    justify-content: center;
+}
+
+.contact__text {
+    font-size: 18px;
+    padding: 30px 20px;
+    border-color: white;
+    border: 1px solid white;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.contact__title-h2 {
+    color: black;
+    font-weight: normal;
+}
+.formularove-pole {
+    margin-bottom: 10px;
+}
+
+.formularove-pole label {
+    display: block;
+    color: black;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.formularove-pole :is(input, textarea, select) {
+	width: 100%;
+	padding: 10px;
+	border: 1px solid white;
+	border-radius: 5px;
+}
+
+.required:after {
+	content: "*";
+	color: red;
+	margin-left: 4px;
+}
+
+.button {
+    padding: 10px 20px;
+    background-color: $hoover-barva;
+    font-size: 16px;
+    font-weight: bold;
+    border: 1px solid black;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
 
 // pro mobil - hamburger menu // -------------------------------
 // @media screen and (max-width: 799px) { }
@@ -258,9 +406,11 @@ h1, h2 {
 		background-color: $sekundarni-barva;
 	}
 
+    .menu__item:not(:last-child) {
+        border-right: 1px solid white;
+      }
+
 	.menu__item {
-        border: 2px dashed black;
-        border-radius: 10px;
         text-align: center;
         align-items: baseline;
         margin: 3px;
@@ -309,7 +459,24 @@ h1, h2 {
         font-weight: bolder;
     }
 	.menu__item {
-		border: 2px dashed black;
         justify-content: center;
 	}
+}
+
+// *** DENNYHO METODA *** // ---------------------------------------
+.reference {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, auto);
+}
+
+.reference h3 {
+    font-size: 18px;
+}
+.reference__foto {
+    width: 200px;
+    height: 300px;
+    float: left;
+    padding-left: 10px;
 }
