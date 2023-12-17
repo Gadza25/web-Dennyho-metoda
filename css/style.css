@@ -20,7 +20,7 @@ body {
 }
 
 main {
-  padding: 20px 50px;
+  padding: 5px 15px;
   overflow: auto;
 }
 
@@ -29,18 +29,16 @@ main {
   justify-content: space-between;
 }
 
-.header__img-logo {
-  width: 60px;
-  height: 60px;
-  padding: 10px;
-  border: 2px solid white;
+.header__img-logo img {
+  width: 80px;
+  height: 80px;
 }
 
 .header__contact--nadpis {
   text-align: right;
-  padding-right: 30px;
+  padding: 0 30px 0 0;
   font-weight: bold;
-  font-size: 22px;
+  font-size: 14.6666666667px;
   color: rgb(89, 55, 240);
 }
 
@@ -53,11 +51,11 @@ main {
   justify-content: right;
   list-style: none;
   margin: 0;
-  padding: 3px;
+  padding: 0;
 }
 
 .header__item {
-  margin: 2px;
+  margin: 0;
   display: block;
   font-size: 13px;
 }
@@ -73,22 +71,19 @@ main {
   background-color: pink;
 }
 
-.header__inner {
+.header__image {
   background-image: url(/image/Ema\ -\ vsichni1\ -\ mensi.jpg);
   min-height: 150px;
-  color: white;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  font-size: 30px;
-  font-weight: bold;
 }
 
 .header__name {
   text-align: left;
-  padding: 200px 0 15px 20px;
+  padding: 0 0 5px 10px;
   font-family: "Nunito", sans-serif;
-  font-size: 44px;
+  font-size: 22px;
   font-weight: bold;
   color: white;
 }
@@ -131,19 +126,6 @@ h2 {
   font-weight: bold;
 }
 
-/* zadat pro pc
-.uvod {
-    display: grid;
-    grid-template-areas: 
-    "uvod__levy uvod__stred uvod__pravy";
-    grid-auto-columns: 1fr 2fr 1fr;
-    justify-items: center;
-    text-align: center;
-    margin-top: 30px;
-    margin-bottom: 30px;
-    padding: 10px;
-    gap: 15px;
-}*/
 .uvod {
   justify-items: center;
   text-align: center;
@@ -175,13 +157,35 @@ h2 {
   font-size: 18px;
 }
 
-.reference__foto {
-  width: 200px;
-  height: 300px;
+.reference__foto-left {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100px;
+  height: 150px;
   float: left;
-  padding-left: 10px;
+  margin: 10px 15px 10px 0;
 }
 
+.reference__slamova {
+  clear: left;
+}
+
+.reference__foto-right {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100px;
+  height: 150px;
+  float: right;
+  margin: 10px 0 10px 15px;
+}
+
+.reference__vinanska {
+  clear: right;
+}
+
+/*max-width: 200px;
+float: left;
+margin: 10px 30px 10px 0; */
 .menu_komu-pomahame {
   text-align: justify;
 }
@@ -189,13 +193,11 @@ h2 {
 .menu_komu-pomahame img {
   -o-object-fit: cover;
      object-fit: cover;
-  width: 200px;
-  height: 300px;
+  width: 100px;
+  height: 150px;
 }
 
 .pomahame__rodicum img {
-  width: -moz-fit-content;
-  width: fit-content;
   max-width: 200px;
   float: right;
   margin: 10px 0 10px 30px;
@@ -203,8 +205,6 @@ h2 {
 
 .pomahame__detem img,
 .pomahame__pedagogum img {
-  width: -moz-fit-content;
-  width: fit-content;
   max-width: 200px;
   float: left;
   margin: 10px 30px 10px 0;
@@ -229,25 +229,23 @@ h2 {
   margin: 0 0 10px 30px;
 }
 
------ .videa__list {
-  display: grid;
-  gap: 15px;
-  grid-template-columns: repeat(auto-fill, 560px);
-  width: -moz-max-content;
-  width: max-content;
-  padding: 10px 20px;
-  justify-content: center;
+.menu_videa {
+  margin: 0;
 }
 
-.videa__item a {
+.video__list a {
+  padding-bottom: 5px;
+}
+
+.videa__item {
   list-style: none;
   text-decoration: none;
-  padding: 5px;
   color: black;
 }
 
 .video__links {
-  text-align: center;
+  text-align: left;
+  margin-bottom: 5px;
 }
 
 .fotogalerie {
@@ -318,19 +316,18 @@ h2 {
   font-weight: 600;
 }
 
-.contact__grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 30px;
+/*.contact__grid {
+	display: none;
+	grid-template-columns: 1fr 1fr;
+	gap: $spacer * 1.5;
 }
 
 .contact__grid-item {
-  justify-content: center;
-}
-
+    justify-content: center;
+}*/
 .contact__text {
-  font-size: 18px;
-  padding: 30px 20px;
+  font-size: 14px;
+  padding: 5px 10px;
   border-color: white;
   border: 1px solid white;
   text-align: center;
@@ -349,7 +346,7 @@ h2 {
 .formularove-pole label {
   display: block;
   color: black;
-  font-size: 18px;
+  font-size: 16px;
   margin-bottom: 10px;
 }
 
@@ -367,9 +364,9 @@ h2 {
 }
 
 .button {
-  padding: 10px 20px;
+  padding: 7px 17px;
   background-color: pink;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: bold;
   border: 1px solid black;
   border-radius: 5px;
@@ -428,6 +425,38 @@ h2 {
 }
 
 @media screen and (min-width: 750px) {
+  main {
+    padding: 20px 40px;
+    overflow: auto;
+  }
+  .header__img-logo img {
+    width: 100px;
+    height: 100px;
+  }
+  .header__contact--nadpis {
+    text-align: right;
+    padding-right: 30px;
+    font-weight: bold;
+    font-size: 22px;
+    color: rgb(89, 55, 240);
+  }
+  .header__inner {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .header__image {
+    background-image: url(/image/Ema\ -\ vsichni1\ -\ mensi.jpg);
+    min-height: 300px;
+  }
+  .header__name {
+    text-align: center;
+    padding: 0;
+    font-family: "Nunito", sans-serif;
+    font-size: 35px;
+    font-weight: bold;
+    color: white;
+  }
   .menu__toggler {
     display: none;
   }
@@ -486,4 +515,111 @@ h2 {
     float: left;
     padding-left: 10px;
   }
+}
+.menu_komu-pomahame {
+  text-align: justify;
+}
+
+.menu_komu-pomahame img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 200px;
+  height: 300px;
+}
+
+.pomahame__rodicum img {
+  width: -moz-fit-content;
+  width: fit-content;
+  max-width: 200px;
+  float: right;
+  margin: 10px 0 10px 30px;
+}
+
+.pomahame__detem img,
+.pomahame__pedagogum img {
+  width: -moz-fit-content;
+  width: fit-content;
+  max-width: 200px;
+  float: left;
+  margin: 10px 30px 10px 0;
+}
+
+.videa__list {
+  display: grid;
+  gap: 15px;
+  grid-template-columns: repeat(auto-fill, 560px);
+  width: -moz-max-content;
+  width: max-content;
+  overflow: auto;
+  justify-content: center;
+}
+
+.videa__item a {
+  list-style: none;
+  text-decoration: none;
+  padding: 5px;
+  color: black;
+  padding: 10px 20px;
+}
+
+.video__links {
+  text-align: center;
+}
+
+/*.contact {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: $spacer * 1.5;
+}
+
+.contact__item {
+    justify-content: center;
+}*/
+.contact__text {
+  font-size: 18px;
+  padding: 30px 20px;
+  border-color: white;
+  border: 1px solid white;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.contact__title-h2 {
+  color: black;
+  font-weight: normal;
+}
+
+.formularove-pole {
+  margin-bottom: 10px;
+}
+
+.formularove-pole label {
+  display: block;
+  color: black;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.formularove-pole :is(input, textarea, select) {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid white;
+  border-radius: 5px;
+}
+
+.required:after {
+  content: "*";
+  color: red;
+  margin-left: 4px;
+}
+
+.button {
+  padding: 10px 20px;
+  background-color: pink;
+  font-size: 16px;
+  font-weight: bold;
+  border: 1px solid black;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 20px;
 }
