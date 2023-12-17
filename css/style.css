@@ -30,8 +30,8 @@ main {
 }
 
 .header__img-logo {
-  width: 100px;
-  height: 100px;
+  width: 60px;
+  height: 60px;
   padding: 10px;
   border: 2px solid white;
 }
@@ -131,24 +131,38 @@ h2 {
   font-weight: bold;
 }
 
-.grid_uvod {
-  display: grid;
-  grid-template-areas: "uvod__levy uvod__stred uvod__pravy";
-  grid-auto-columns: 1fr 2fr 1fr;
+/* zadat pro pc
+.uvod {
+    display: grid;
+    grid-template-areas: 
+    "uvod__levy uvod__stred uvod__pravy";
+    grid-auto-columns: 1fr 2fr 1fr;
+    justify-items: center;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding: 10px;
+    gap: 15px;
+}*/
+.uvod {
   justify-items: center;
   text-align: center;
-  margin-top: 30px;
-  margin-bottom: 30px;
-  padding: 10px;
-  gap: 15px;
+  margin: 0;
+  pad: 0;
 }
 
-.grid_uvod__citace {
+.uvod__citace {
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  padding: 10px 20px;
+  border-bottom: 1px solid white;
 }
 
-.grid_uvod__pravy {
-  width: 100%;
+.uvod__foto {
+  width: -moz-fit-content;
+  width: fit-content;
+  max-width: 200px;
+  margin: 10px 0;
+  overflow: cover;
   background-color: rgb(204, 243, 248);
   border-radius: 10px;
 }
@@ -363,6 +377,13 @@ h2 {
   margin-bottom: 20px;
 }
 
+.header__img-logo {
+  width: 100px;
+  height: 100px;
+  padding: 10px;
+  border: 2px solid white;
+}
+
 .menu__checkbox {
   /*position: absolute;
   left: -9999px; */
@@ -406,16 +427,20 @@ h2 {
   cursor: pointer;
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 750px) {
   .menu__toggler {
     display: none;
   }
   .menu__list {
     display: flex;
+    flex: 0 1 auto;
     justify-content: center;
     list-style: none;
     margin: 0;
     padding: 3px;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
   }
   .menu__link {
     display: block;
@@ -427,21 +452,38 @@ h2 {
   .menu__item {
     justify-content: center;
   }
-}
-.reference {
-  display: grid;
-  gap: 20px;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(4, auto);
-}
-
-.reference h3 {
-  font-size: 18px;
-}
-
-.reference__foto {
-  width: 200px;
-  height: 300px;
-  float: left;
-  padding-left: 10px;
+  .uvod {
+    display: grid;
+    grid-template-areas: "uvod__levy uvod__stred";
+    grid-auto-columns: 1fr 2fr;
+    justify-items: baseline;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding: 10px;
+    gap: 15px;
+  }
+  .uvod__citace {
+    border-bottom: none;
+  }
+  .uvod__text {
+    border-left: 1px solid white;
+    border-bottom: none;
+    padding-left: 20px;
+  }
+  .reference {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, auto);
+  }
+  .reference h3 {
+    font-size: 18px;
+  }
+  .reference__foto {
+    width: 200px;
+    height: 300px;
+    float: left;
+    padding-left: 10px;
+  }
 }
